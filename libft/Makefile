@@ -6,7 +6,7 @@
 #    By: rde-kwaa <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/23 14:02:55 by rde-kwaa          #+#    #+#              #
-#    Updated: 2018/06/04 15:36:39 by rde-kwaa         ###   ########.fr        #
+#    Updated: 2018/06/07 15:12:13 by rde-kwaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC = 	  ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 	  ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
 	  ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_len.c ft_neg.c \
-	  ft_wordlen.c
+	  ft_wordlen.c ft_charneg.c ft_wspace.c
 
 OBJ = $(SRC:.c=.o)
 

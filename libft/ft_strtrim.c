@@ -12,14 +12,7 @@
 
 #include "libft.h"
 
-static int	ft_wspace(int c)
-{
-	if (c == ' ' || c == '\n' || c == '\t')
-		return (1);
-	return (0);
-}
-
-char		*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
 	char			*ret;
 	unsigned int	start;

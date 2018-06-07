@@ -6,7 +6,7 @@
 /*   By: rde-kwaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 14:23:45 by rde-kwaa          #+#    #+#             */
-/*   Updated: 2018/06/06 11:07:22 by rde-kwaa         ###   ########.fr       */
+/*   Updated: 2018/06/07 17:12:07 by rde-kwaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,15 @@ void				*ft_memmove(void *dst, void const *src, size_t n);
 void				*ft_memchr(void const *s, int c, size_t n);
 int					ft_memcmp(void const *s1, void const *s2, size_t n);
 size_t				ft_strlen(char const *s);
-char				*ft_strdup(char *src);
-char				*ft_strcpy(char *dst, char *src);
-char				*ft_strncpy(char *dst, char const *src, unsigned int n);
-char				*ft_strcat(char *dst, char *src);
+char				*ft_strdup(char const *src);
+char				*ft_strcpy(char *dst, char const *src);
+char				*ft_strncpy(char *dst, char const *src, size_t n);
+char				*ft_strcat(char *dst, char const *src);
 size_t				ft_strlcat(char *dst, char const *src, size_t size);
-char				*ft_strncat(char *dst, char *src, int n);
+char				*ft_strncat(char *dst, char const *src, size_t n);
 char				*ft_strchr(char const *s, int c);
 char				*ft_strrchr(char const *s, int c);
-char				*ft_strstr(char *s1, char *s2);
+char				*ft_strstr(char const *s1, char const *s2);
 char				*ft_strnstr(char const *s1, char const *s2, size_t n);
 int					ft_strcmp(char const *s1, char const *s2);
 int					ft_strncmp(char const *s1, char const *s2, size_t n);
@@ -81,8 +81,10 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-int                             ft_len(int n);
-int                             ft_neg(int n);
-size_t                          ft_wordlen(char const *s, size_t i, size_t len, char c);
+int					ft_len(int n);
+int					ft_charneg(char c);
+int					ft_neg(int n);
+int					ft_wspace(int c);
+size_t				ft_wordlen(char const *s, size_t i, size_t len, char c);
 
 #endif

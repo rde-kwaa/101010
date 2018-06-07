@@ -6,13 +6,13 @@
 /*   By: rde-kwaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 11:44:32 by rde-kwaa          #+#    #+#             */
-/*   Updated: 2018/06/01 14:14:07 by rde-kwaa         ###   ########.fr       */
+/*   Updated: 2018/06/07 17:04:58 by rde-kwaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dst, char *src)
+char	*ft_strcat(char *dst, char const *src)
 {
 	int i;
 	int size;

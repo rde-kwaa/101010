@@ -24,8 +24,7 @@ int	ft_atoi(char const *s1)
 	while ((s1[i] == ' ') || (s1[i] == '\t') || (s1[i] == '\n')
 		|| (s1[i] == '\v') || (s1[i] == '\f') || (s1[i] == '\r'))
 		i++;
-	if (s1[i] == 45)
-		neg = 1;
+	neg = ft_charneg(s1[i]);
 	if ((s1[i] == 45) || (s1[i] == 43))
 		i++;
 	while ((s1[i] >= 48) && (s1[i] <= 57))

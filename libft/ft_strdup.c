@@ -6,13 +6,13 @@
 /*   By: rde-kwaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 18:29:25 by rde-kwaa          #+#    #+#             */
-/*   Updated: 2018/05/31 17:00:33 by rde-kwaa         ###   ########.fr       */
+/*   Updated: 2018/06/07 17:03:37 by rde-kwaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(char const *src)
 {
 	int		i;
 	int		len;
