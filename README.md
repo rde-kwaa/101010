@@ -1,4 +1,4 @@
-## 101010
+## 101027
 
 Project repository for wethinkcode_
 
@@ -23,6 +23,4 @@ git clone https://github.com/rde-kwaa/101010.git
 
 
 
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/42_Logo.svg/1024px-42_Logo.svg.png)]
-
-
+[![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/42_Logo.svg/1024px-42_Logo.svg.png)]
