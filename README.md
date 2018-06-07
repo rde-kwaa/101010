@@ -7,7 +7,7 @@ Project repository for wethinkcode_
 Contains:
 
 * **libft**
-* **.vimrc**
+* **.vimrc** (to be added)
 
 
 
