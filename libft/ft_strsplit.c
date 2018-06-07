@@ -12,14 +12,6 @@
 
 #include "libft.h"
 
-static size_t	ft_len(char const *s, size_t i, size_t len, char c)
-{
-	len = 0;
-	while (s[i + len] && (s[i + len] != c))
-		len++;
-	return (len);
-}
-
 char			**ft_strsplit(char const *s, char c)
 {
 	char	**ret;
@@ -39,7 +31,7 @@ char			**ft_strsplit(char const *s, char c)
 			i++;
 		else
 		{
-			len = ft_len(s, i, len, c);
+			len = ft_wordlen(s, i, len, c);
 			ret[j++] = ft_strsub(s, i, len);
 			i = i + len;
 		}

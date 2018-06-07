@@ -43,7 +43,7 @@ char				*ft_strstr(char *s1, char *s2);
 char				*ft_strnstr(char const *s1, char const *s2, size_t n);
 int					ft_strcmp(char const *s1, char const *s2);
 int					ft_strncmp(char const *s1, char const *s2, size_t n);
-int					ft_atoi(char *s);
+int					ft_atoi(char const *s);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -81,5 +81,8 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int                             ft_len(int n);
+int                             ft_neg(int n);
+size_t                          ft_wordlen(char const *s, size_t i, size_t len, char c);
 
 #endif

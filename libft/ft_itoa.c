@@ -12,24 +12,6 @@
 
 #include "libft.h"
 
-static int	ft_neg(int n)
-{
-	if (n < 0)
-		return (1);
-	else
-		return (0);
-}
-
-static int	ft_len(int n)
-{
-	int		len;
-
-	len = 0;
-	while (n /= 10)
-		len++;
-	return (len);
-}
-
 char		*ft_itoa(int n)
 {
 	int		len;
