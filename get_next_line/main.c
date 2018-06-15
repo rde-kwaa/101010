@@ -27,6 +27,8 @@ int		main(void)
 		return (1);
 	}
 	get_next_line(fd, &line);
+    ft_putnbr(fd);
+    ft_putchar('\n');
 	if (close(fd) == -1)
 	{
 		ft_putstr("close() error");
