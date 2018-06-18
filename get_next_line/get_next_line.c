@@ -6,14 +6,10 @@
 /*   By: rde-kwaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/11 12:17:54 by rde-kwaa          #+#    #+#             */
-/*   Updated: 2018/06/11 17:39:54 by rde-kwaa         ###   ########.fr       */
+/*   Updated: 2018/06/16 16:55:13 by rde-kwaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "get_next_line.h"
 
 int		end(char *buf)
@@ -30,17 +26,17 @@ int		end(char *buf)
 
 int		get_line(const int fd, char *buf, char *strs[fd])
 {
-	int 	rn;
-	char	*tmp;
+	int			rn;
+	char		*tmp;
 
-	while (((rn = read(fd, buf, BUFF_SIZE)) > 0) && (end(buf) != 1))
+	while ((end(buf) != 1) && ((rn = read(fd, buf, BUFF_SIZE)) > 0))
 	{
 		buf[rn] = '\0';
 		tmp = strs[fd];
 		strs[fd] = ft_strjoin(tmp, buf);
 		ft_strdel(&tmp);
 	}
-	//free up buffer here
+	ft_strdel(&buf);
 	if (rn < 0)
 		return (-1);
 	return (1);
@@ -48,19 +44,20 @@ int		get_line(const int fd, char *buf, char *strs[fd])
 
 int		get_next_line(const int fd, char **line)
 {
-	int 		rn;
+	int			rn;
 	static char	*strs[2147483647];
-	char		buf[BUFF_SIZE + 1];
+	char		*buf;
 	char		*str;
 	char		*tmp;
 
 	if (fd < 0 || !line || BUFF_SIZE < 1)
 		return (-1);
-	if (!(strs[fd]))
+	buf = ft_strnew(BUFF_SIZE);
+	if (!strs[fd])
 		strs[fd] = ft_strnew(0);
 	if ((rn = get_line(fd, buf, strs)) == -1)
 		return (-1);
-	if (( str = ft_strchr(strs[fd], '\n')))
+	if ((str = ft_strchr(strs[fd], '\n')))
 	{
 		*line = ft_strsub(strs[fd], 0, str - strs[fd]);
 		tmp = strs[fd];
@@ -70,7 +67,5 @@ int		get_next_line(const int fd, char **line)
 	}
 	*line = ft_strdup(strs[fd]);
 	ft_strdel(&strs[fd]);
-	if (ft_strlen(*line) > 0)
-		return (1);
-	return (0);
+	return (ft_strlen(*line) > 0 ? 1 : 0);
 }
