@@ -1,0 +1,129 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r7p7.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Wed Jul 11 14:37:06 CEST 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/c-exam-alone-in-the-dark-beginner/practice-exam_20180711/rde-kwaa
+
+= Git history ==================================================================
+$> git -C /var/folders/gf/fdxs6p7x5410zksk1wl3yvx40000gq/T/tmp1AyEwC/user log --pretty='%H - %an, %ad : %s'
+fceb4164e2883c17a6dc4c7b8558d8b216de3f0c - Ryan DE KWAADSTENIET, Wed Jul 11 14:36:53 2018 +0200 : lol
+f2a09bd2878c6319abe6b1efba4fb6b5fd57ff30 - Ryan DE KWAADSTENIET, Wed Jul 11 12:51:11 2018 +0200 : Vesuvius
+160eee892d2a0125a4f16023fdf842d7b03e1cd3 - Ryan DE KWAADSTENIET, Wed Jul 11 12:04:15 2018 +0200 : Vishnuvi
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/gf/fdxs6p7x5410zksk1wl3yvx40000gq/T/tmp1AyEwC/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  835 Jul 11 14:37 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Jul 11 14:37 rev_wstr
+drwxr-xr-x  3 deepthought  deepthought  102 Jul 11 14:37 rostring
+drwxr-xr-x  3 deepthought  deepthought  102 Jul 11 14:37 rpn_calc
+
+/var/folders/gf/fdxs6p7x5410zksk1wl3yvx40000gq/T/tmp1AyEwC/user/rev_wstr:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1638 Jul 11 14:37 rev_wstr.c
+
+/var/folders/gf/fdxs6p7x5410zksk1wl3yvx40000gq/T/tmp1AyEwC/user/rostring:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1548 Jul 11 14:37 rostring.c
+
+/var/folders/gf/fdxs6p7x5410zksk1wl3yvx40000gq/T/tmp1AyEwC/user/rpn_calc:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2657 Jul 11 14:37 rpn_calc.c
+ 
+= rpn_calc =====================================================================
+$> clang -Wextra -Wall -Werror rpn_calc.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./587cdgmh6wfl6jkl1grdrxna 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./f4xzn7svx7t3ajit6sbyiavb "2 3 -" "5 6 +"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./obzq6ph1nk37fzms5nw4yrd1 "2 -"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./j4j8o9azwjkjm8d0wnidj38s "-"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./ifs8pss6fhb1e4fc2g7vpkse "2 5 6 -"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./ixdv2xrqqpo4q233m5pzpxrt "3 4 +"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./p8f33l8y3jpcmk0hvvfvdyei "2 4 + 8 *"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./fnm39jzv2aywdkg5kkx0roa0 "50 10 25 + -"
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./dxs9g9dxae0ptwp18ikeeqc9 "1000 5 2 * /"
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./fnoklvddtryp6jas6g93q2ej "1000 3 %"
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./utzi0aj1bypqvapk8ezvzm0g "1000 0 /"
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./01r39p46e10f3hjyy3id69iz "1000 0 %"
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./f6eohdzp6bm10op8v98290km "-1000 -1 *"
+$> diff -U 3 user_output_test13 test13.output | cat -e
+
+Diff OK :D
+= Test 14 ==================================================
+$> ./h0b9wzikw43uzheupienwexk "-111 45 123 * 26 73 + + - 78 * -85 / 123 -"
+$> diff -U 3 user_output_test14 test14.output | cat -e
+
+Diff OK :D
+= Test 15 ==================================================
+$> ./0fvmclhs9jvkyztfgbeehcwa "78 326 542 96 1452 36 965 % - * / - +"
+$> diff -U 3 user_output_test15 test15.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

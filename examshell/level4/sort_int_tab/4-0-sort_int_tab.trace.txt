@@ -1,0 +1,47 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r2p8.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Tue Jul  3 17:23:18 CEST 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/c-exam-alone-in-the-dark-beginner/practice-exam_20180703/rde-kwaa2
+
+= Git history ==================================================================
+$> git -C /var/folders/lg/jcgv6_wj03x00n515b5wnllm0000gq/T/tmpCR4E80/user log --pretty='%H - %an, %ad : %s'
+1c89a599fb5d32664a67b135e63237a232c08c3f - Ryan DE KWAADSTENIET, Tue Jul 3 17:23:03 2018 +0200 : jdewl
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/lg/jcgv6_wj03x00n515b5wnllm0000gq/T/tmpCR4E80/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  263 Jul  3 17:23 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Jul  3 17:23 sort_int_tab
+
+/var/folders/lg/jcgv6_wj03x00n515b5wnllm0000gq/T/tmpCR4E80/user/sort_int_tab:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1137 Jul  3 17:23 sort_int_tab.c
+ 
+= sort_int_tab =================================================================
+$> clang -Wextra -Wall -Werror main.c sort_int_tab.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./kgl8tl5uqe5tselq49pd9v0p
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
